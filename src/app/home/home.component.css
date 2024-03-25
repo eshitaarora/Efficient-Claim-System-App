@@ -1,0 +1,137 @@
+*{
+    margin: 5px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+.about-section {
+    padding: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    background: linear-gradient(to right, #b0c1aa, #429b4d);
+}
+.about-image-content {
+    width: 50%;
+    max-width: 100%;
+    text-align: center;
+}
+.about-image1 {
+    width: 80%;
+    height: auto;
+}
+.about-image2 {
+    width: 20%;
+    height: auto;
+}
+.about-text-content {
+    width: 50%;
+}
+.about-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 40px;
+    font-weight: bold;
+}
+.about-title > span {
+    position: relative;
+}
+.about-title span::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    background-color: #6ed963;
+    border-radius: 8px;
+    left: 0;
+    bottom: -12px;
+}
+.about-description {
+    margin: 32px 0;
+    color: #000000;
+    font-family: 'Rubik', sans-serif;
+    font-size: 18px;
+    letter-spacing: .7px;
+    line-height: 1.7rem;
+}
+.about-text-title {
+    margin: 0 0 24px 0;
+    color: #000000;
+    font-family: 'Poppins', sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: .7px;
+}
+.about-text-step {
+    margin: 16px 0;
+}
+.about-text-sTitle {
+    font-family: 'Rubik', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: .7px;
+}
+.about-text-description {
+    margin: 8px 24px;
+    color: #000000;
+    font-family: 'Rubik', sans-serif;
+    letter-spacing: .7px;
+    line-height: 1.6rem;
+}
+.fa-icon {
+    color: #75bd67;
+}
+@media screen and (max-width: 1000px) {
+    .about-section {
+        display: block;
+    }
+    .about-image-content {
+        width: 100%;
+        max-width: 100%;
+        margin: 0 0 32px 0;
+    }
+    .about-image1 {
+        width: 100%;
+        height: 100%;
+    }
+    .about-text-content {
+        width: 100%;
+    }
+}
+button {
+    padding: 10px 20px;
+    background-color: #307934;
+    color: #fff;
+    border: black;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+  }
+
+  .navbar {
+    background-color: #ffffff;
+  }
+  
+  .nav-link {
+    color: #000000; 
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+  }
+  
+  .nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+  }
+  
+  .nav-link:not(:last-child) {
+    margin-right: 10px;
+  }
+  
+  .company-title {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #000000;
+    font-size: 55px;
+  }

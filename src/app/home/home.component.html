@@ -1,0 +1,40 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <a class="nav-link" routerLink="/home">Home</a>
+        <a class="nav-link" routerLink="/dashboard">Dashboard</a>
+        <a class="nav-link" routerLink="/login">Logout</a>
+      </div>
+    </div>
+  </nav>
+
+<div class="about-section" id="about">
+    <div class="about-image-content">
+      <h2 class="company-title">Insurance Dekho</h2>
+        <img class="img-responsive" src="assets/vehicle.jpg" alt=InsurancePhoto class="about-image1">
+    </div>
+    <div class="about-text-content">
+      <h3 class="about-title">
+        <span>About Us</span>
+      </h3>
+      <p class="about-description">
+        Welcome to Vehicle Insurance Website, Here you can apply for the insurance of two wheelers and four wheelers. You can enter the details of your vehicle and can upload the documents regarding the same for applying for Insurance.
+      </p>
+  
+      <h4 class="about-text-title">Services Available</h4>
+      <div class="solution-step">
+        <h5>Insurance for Two Wheelers</h5>
+        <img class="img-responsive" src="assets/two_Wheeler.jpg" alt=InsurancePhoto class="about-image2">
+      </div>
+      <div class="solution-step">
+        <h5>Insurance for Three Wheelers</h5>
+        <img class="img-responsive" src="assets/three_Wheeler.jpg" alt=InsurancePhoto class="about-image2">
+      </div>
+      <div class="solution-step">
+        <h5>Insurance for Four Wheelers</h5>
+        <img class="img-responsive" src="assets/truck.jpg" alt=InsurancePhoto class="about-image2">
+        <button (click)="navigateToDashboard()">Claim Insurance</button>
+      </div>
+    </div>
+  </div>
+  

@@ -1,0 +1,67 @@
+<div class="container">
+  <header>
+    <form class="d-flex">
+      <span class="text-white">{{ loggedUser?.email }}</span>
+      <button class="btn btn-primary" type="button" routerLink="/login">Log Out</button>
+    </form>
+  </header>
+  <h2>Submit Vehicle Claim</h2>
+  <form [formGroup]="claimForm" class="container mx-5" (ngSubmit)="submitClaim()">
+    <div class="d-flex flex-colomn">
+      <div class="form-group d-flex">
+        <label for="vehicleType">Vehicle Type</label>
+        <select formControlName="vehicleType" class="form-control">
+          <option value=" ">Select Vehicle Type</option>
+          <option value="car">Car</option>
+          <option value="scooter">Scooter</option>
+          <option value="Auto-Rickshaw">Auto-Rickshaw</option>
+          <option value="bike">bike</option>
+          <option value="truck">truck</option>
+  </select>
+      </div>
+      <div *ngIf="claimForm.get('vehicleType')!.value == ' '">
+        <img src="" class="w-50" alt="">
+      </div>
+      <div *ngIf="claimForm.get('vehicleType')!.value == 'car' ">
+        <img class="img-responsive" src="assets/car.jpg" alt=InsurancePhoto class="about-image2">
+      </div>
+      <div *ngIf="claimForm.get('vehicleType')!.value == 'scooter' ">
+        <img class="img-responsive" src="assets/scooter.jpeg" alt=InsurancePhoto class="about-image2">
+      </div>
+      <div *ngIf="claimForm.get('vehicleType')!.value == 'Auto-Rickshaw' ">
+        <img class="img-responsive" src="assets/rickshaw.jpg" alt=InsurancePhoto class="about-image2">
+      </div>
+      <div *ngIf="claimForm.get('vehicleType')!.value == 'bike' ">
+        <img class="img-responsive" src="assets/bike.png" alt=InsurancePhoto class="about-image2">
+      </div>
+      <div *ngIf="claimForm.get('vehicleType')!.value == 'truck' ">
+        <img class="img-responsive" src="assets/truck.jpg" alt=InsurancePhoto class="about-image2">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="vehicleRegNumber">Vehicle Registration Number</label>
+      <input type="text" formControlName="vehicleRegNumber" class="form-control">
+    </div>
+    <div class="form-group">
+      <label for="vehicleModel">Vehicle Model</label>
+      <input type="text" formControlName="vehicleModel" class="form-control">
+    </div>
+    <div class="form-group">
+      <label for="vehicleYear">Vehicle Year</label>
+      <input type="number" formControlName="vehicleYear" class="form-control">
+    </div>
+    <div class="form-group">
+      <label for="accidentDetails">Accident Details</label>
+      <textarea formControlName="accidentDetails" class="form-control"></textarea>
+    </div>
+    <div class="form-group">
+      <label for="files">Upload Files</label>
+      <input type="file" formControlName="files" class="form-control-file">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit Claim</button>
+    <div *ngIf="claimSubmitted" class="confirmation-message">
+      Thank You! 
+      Claim is submitted. A service provider will soon get back to you on mail.
+    </div>
+  </form>
+</div>
